@@ -6,6 +6,33 @@ This is a learner portal, not a fourth course. It connects three public reposito
 Each linked repository remains the canonical source of truth—the authoritative location
 for the lessons, code, fixtures, and analysis it owns.
 
+**Path:** 🟦 Build the system → 🟩 Check the workflow → 🟪 Check the measurement
+
+## Learning path at a glance
+
+```mermaid
+flowchart LR
+    B["1. Build<br/>agent systems"] --> W["2. Check<br/>workflow evidence"]
+    W --> M["3. Check<br/>measurement validity"]
+
+    B -.-> Bx["loops · tools · context"]
+    W -.-> Wx["transport vs. task success"]
+    M -.-> Mx["bounds · strata · repeatability"]
+
+    classDef build fill:#e8f1ff,stroke:#2563eb,color:#0f172a
+    classDef workflow fill:#ecfdf5,stroke:#16a34a,color:#0f172a
+    classDef measure fill:#f5f3ff,stroke:#7c3aed,color:#0f172a
+    classDef detail fill:#f8fafc,stroke:#94a3b8,color:#334155
+
+    class B build
+    class W workflow
+    class M measure
+    class Bx,Wx,Mx detail
+```
+
+The colors are navigation cues, not maturity ratings: blue means build, green means
+check the workflow, and purple means check the measurement.
+
 ## Start here
 
 This path is for developers, technical enablement practitioners, evaluators, and builders
@@ -122,6 +149,13 @@ You have completed the path when you can:
 2. identify evidence that would make the workflow abstain or escalate;
 3. explain why the evaluation method itself may be too weak to support the decision; and
 4. state what each repository does not prove.
+
+## More learning
+
+For additional technical walkthroughs and enablement material, visit
+[AWS Julie on YouTube](https://www.youtube.com/@JulieElkins). The channel is
+supplementary learning; the three repositories remain the evidence for this path's
+exercises and claims.
 
 ## Repository boundaries
 
