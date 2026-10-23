@@ -65,6 +65,22 @@ the only step that can spend money, and it is not required.
 
 Follow the parts in order.
 
+### New learner: the shortest route
+
+If you are new to AI systems, use this sequence:
+
+1. Read Part 0's **Minimum path** and trace the synthetic request shown there.
+2. Open the [Claude Architect Lab learning path](https://github.com/julie-elkins/claude-architect-lab/blob/main/LEARNING-PATH.md),
+   then use its [whole-course guide](https://github.com/julie-elkins/claude-architect-lab/blob/main/GUIDE.md)
+   as the single reading path.
+3. Run the Course Doctor check from Part 1.
+4. Run the [Production AI Engineering Bridge Lab](https://github.com/julie-elkins/agent-assurance-harness/blob/main/examples/production-ai-engineering-bridge-lab/README.md).
+5. Continue to workflow evidence, measurement validity, and security.
+
+You do not need to understand the repository folders before starting. The portal gives
+you the route; each repository remains the authoritative source for the material it
+owns.
+
 ## Part 0 — Build the foundations
 
 **Objective:** Build the technical layers underneath AI systems before choosing
@@ -107,7 +123,8 @@ security, and evaluation can be studied alongside or after the first lab.
    for short AI engineering examples.
 
 **Vocabulary to learn:** model, prompt, context, tool, workflow, agent, eval
-(evaluation), guardrail, and human approval.
+(evaluation), guardrail (a protective check that restricts model or tool behavior), and
+human approval.
 
 **Learner exercise:** Trace one synthetic request through this sequence:
 
@@ -178,11 +195,15 @@ uv run python examples/production-ai-engineering-bridge-lab/run_lab.py
 **Expected result:** The synthetic workflow records its data contract and access check,
 detects an empty semantic result despite transport success, blocks an external write
 without execution authority, preserves bounded evidence, contains the incident, and
-stages recovery for human review.
+stages recovery for human review. It also reports bounded synthetic retry, cost, and
+latency controls rather than implying that a successful run is automatically ready for
+production.
 
 **Learner checkpoint:** Explain what evidence would reconstruct the run, why the
 external action is blocked, which boundary is outside the model, and what regression
-test should run before recovery.
+test should run before recovery. Identify which guardrails apply at input, agent,
+handoff, tool, and external-action boundaries, and explain what happens if the
+guardrail or approval check is unavailable.
 
 **Limitation:** This is an offline synthetic lab. It does not establish live model
 quality, production observability, security approval, rollback capability, or business
@@ -263,8 +284,8 @@ AI-agent security training.
 
 **Read current first-party guidance:**
 
-- [OpenAI Agent Builder safety](https://developers.openai.com/api/docs/guides/agent-builder-safety/)
-- [OpenAI deep research safety](https://developers.openai.com/api/docs/guides/deep-research/)
+- [OpenAI Agent Builder safety](https://developers.openai.com/api/docs/guides/agent-builder-safety)
+- [OpenAI deep research safety](https://developers.openai.com/api/docs/guides/deep-research)
 - [Anthropic trustworthy agents](https://www.anthropic.com/research/trustworthy-agents)
 - [Anthropic Claude Code sandboxing](https://www.anthropic.com/research/claude-code-sandboxing)
 
@@ -277,11 +298,16 @@ Identify:
 - which content is untrusted;
 - which tool permissions are broader than necessary;
 - where data could be exfiltrated; and
-- which action requires human approval.
+- which action requires human approval;
+- whether every agent handoff and tool boundary has the required guardrail;
+- what happens if a guardrail, approval service, or telemetry path is unavailable; and
+- what data should be retained, deleted, or shown to a reviewer.
 
 **Expected result:** You can describe a guarded path that validates tool arguments and
-outputs, limits access, records the decision, blocks unsafe actions, and escalates when
-evidence is insufficient.
+outputs, limits access, records the decision, blocks unsafe actions, fails closed when
+the required control is unavailable, and escalates when evidence is insufficient. You
+can also state how the workflow protects privacy and makes AI-influenced decisions
+visible to the appropriate reviewer.
 
 **Learner checkpoint:** Explain why a model's ability to follow instructions is also a
 security risk when the instructions come from an untrusted document, webpage, email, or
@@ -291,6 +317,9 @@ tool result.
 
 - Read the [AI Incident Response Guide](https://github.com/julie-elkins/agent-assurance-harness/blob/main/docs/AI_INCIDENT_RESPONSE.md).
 - Run the [AI Incident Response Tabletop Lab](https://github.com/julie-elkins/agent-assurance-harness/blob/main/examples/ai-incident-response-lab/README.md).
+- Read [Developer Workflow Assurance](https://github.com/julie-elkins/agent-assurance-harness/blob/main/docs/DEVELOPER_WORKFLOW_ASSURANCE.md)
+  to examine the delivery path—the code, dependencies, permissions, and CI checks that
+  enforce the security controls.
 
 The guide preserves the familiar preparation, identification, containment,
 investigation, eradication, recovery, and follow-up lifecycle, then adds AI-specific
@@ -312,7 +341,9 @@ You have completed the path when you can:
 4. identify evidence that would make the workflow abstain or escalate;
 5. explain why the evaluation method itself may be too weak to support the decision;
 6. identify untrusted inputs, excessive permissions, and approval boundaries; and
-7. state what each repository does not prove.
+7. identify where guardrail coverage, privacy, transparency, and delivery-path evidence
+   can fail; and
+8. state what each repository does not prove.
 
 ## More learning
 
