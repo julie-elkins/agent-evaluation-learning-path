@@ -13,12 +13,12 @@ authoritative location for the lessons, code, fixtures, and analysis it owns.
 
 ```mermaid
 flowchart LR
-    F["0. Foundations<br/>how AI systems fit together"] --> B["1. Build<br/>agent systems"]
+    F["0. Foundations<br/>compute → data → AI"] --> B["1. Build<br/>agent systems"]
     B --> W["2. Check<br/>workflow evidence"]
     W --> M["3. Check<br/>measurement validity"]
     M --> S["4. Secure<br/>the workflow"]
 
-    F -.-> Fx["models · context · tools"]
+    F -.-> Fx["systems · data · ML · AI"]
     B -.-> Bx["loops · tools · context"]
     W -.-> Wx["transport vs. task success"]
     M -.-> Mx["bounds · strata · repeatability"]
@@ -63,8 +63,35 @@ Follow the parts in order.
 
 ## Part 0 — Build the foundations
 
-**Objective:** Build a plain-language map of how AI systems fit together before choosing
+**Objective:** Build the technical layers underneath AI systems before choosing
 frameworks or writing agent code.
+
+AI is not a single layer. A useful learner map is:
+
+1. **Computing and systems:** operating systems, processes, memory, storage,
+   virtualization (isolated computing environments), and containers.
+2. **Networking and distributed systems:** DNS, HTTP, TLS, APIs, latency, retries,
+   queues, identity, and failure across service boundaries.
+3. **Cloud and operations:** shared responsibility, isolation, observability, cost,
+   backup, rollback, and recovery.
+4. **Data engineering:** schemas, storage, pipelines, data quality, lineage, access
+   control, and reproducibility.
+5. **Statistics and machine learning:** train/test splits, leakage, overfitting,
+   uncertainty, metrics, and error analysis.
+6. **AI and model systems:** search, planning, neural networks, embeddings,
+   transformers, retrieval, and generation.
+7. **Agent assurance:** context, tools, evaluation, security boundaries, approval, and
+   incident response.
+
+Data engineering is foundational to production machine learning. Machine learning is a
+major foundation of modern applied AI, but not the whole of AI: search, planning, and
+symbolic reasoning also matter.
+
+**Minimum path:** Study systems, networking, data, ML, and AI vocabulary before Part 1.
+
+**Depth branches:** HPC (high-performance computing, parallel compute for large-scale
+training and inference), GPUs and accelerators, distributed training, cloud operations,
+security, and evaluation can be studied alongside or after the first lab.
 
 **Start with existing learning material:**
 
@@ -84,11 +111,13 @@ frameworks or writing agent code.
 request → model → context → tool → result → evidence → completion or escalation
 ```
 
-**Expected result:** You can explain what each component contributes and identify where
-an apparently successful response could still fail.
+**Expected result:** You can explain how a request moves through the systems, network,
+data, ML, and AI layers, then identify where an apparently successful response could
+still fail.
 
 **Learner checkpoint:** Explain the difference between a chatbot, a workflow, and an
-agent, and why adding a tool increases both capability and risk.
+agent; why adding a tool increases both capability and risk; and why data quality,
+network behavior, and resource limits can become AI failures.
 
 **Limitation:** These materials provide foundations; they do not replace hands-on
 implementation or prove that a particular model is safe or accurate.
@@ -224,9 +253,19 @@ evidence is insufficient.
 security risk when the instructions come from an untrusted document, webpage, email, or
 tool result.
 
+**Continue with the AI incident-response guide:**
+
+- Read the [AI Incident Response Guide](https://github.com/julie-elkins/agent-assurance-harness/blob/main/docs/AI_INCIDENT_RESPONSE.md).
+- Run the [AI Incident Response Tabletop Lab](https://github.com/julie-elkins/agent-assurance-harness/blob/main/examples/ai-incident-response-lab/README.md).
+
+The guide preserves the familiar preparation, identification, containment,
+investigation, eradication, recovery, and follow-up lifecycle, then adds AI-specific
+questions about model revisions, context, tools, execution authority, retries, and
+evidence preservation.
+
 **Limitation:** The current portal exercise is tool-agnostic and synthetic. The
-executable security teaching lab is the next addition to the Agent Assurance Harness; no
-real secrets, external destinations, or production telemetry belong in the exercise.
+tabletop lab is also synthetic. No real secrets, external destinations, or production
+telemetry belong in the exercise.
 
 ## Completion check
 
