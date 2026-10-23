@@ -3,18 +3,20 @@
 A hands-on path from understanding AI fundamentals to building, evaluating, and securing
 agent systems.
 
-This is a learner portal, not a fourth course. It has five stages and connects three
+This is a learner portal, not a fourth course. It has five stages, one production
+bridge, and connects three
 public repositories. Each linked repository remains the canonical source of truth—the
 authoritative location for the lessons, code, fixtures, and analysis it owns.
 
-**Path:** 🟨 Foundations → 🟦 Build → 🟩 Check the workflow → 🟪 Check the measurement → 🟥 Secure
+**Path:** 🟨 Foundations → 🟦 Build → 🟧 Production bridge → 🟩 Check the workflow → 🟪 Check the measurement → 🟥 Secure
 
 ## Learning path at a glance
 
 ```mermaid
 flowchart LR
     F["0. Foundations<br/>compute → data → AI"] --> B["1. Build<br/>agent systems"]
-    B --> W["2. Check<br/>workflow evidence"]
+    B --> P["1.5 Production bridge<br/>deploy · operate · recover"]
+    P --> W["2. Check<br/>workflow evidence"]
     W --> M["3. Check<br/>measurement validity"]
     M --> S["4. Secure<br/>the workflow"]
 
@@ -23,6 +25,7 @@ flowchart LR
     W -.-> Wx["transport vs. task success"]
     M -.-> Mx["bounds · strata · repeatability"]
     S -.-> Sx["injection · permissions · approval"]
+    P -.-> Px["data · telemetry · recovery"]
 
     classDef foundation fill:#fefce8,stroke:#ca8a04,color:#422006
     classDef build fill:#e8f1ff,stroke:#2563eb,color:#0f172a
@@ -36,7 +39,8 @@ flowchart LR
     class W workflow
     class M measure
     class S secure
-    class Fx,Bx,Wx,Mx,Sx detail
+    class P detail
+    class Fx,Bx,Wx,Mx,Sx,Px detail
 ```
 
 The colors are navigation cues, not maturity ratings: yellow means foundations, blue
@@ -153,6 +157,36 @@ the lesson files are edited while `GUIDE.md` is generated.
 
 **Limitation:** Completing this course does not grant a certification or predict an exam
 score.
+
+## Production bridge — Deploy and operate the system
+
+**Objective:** Connect a locally working agent workflow to the operational controls
+needed to observe, evaluate, contain, and recover it. **LLMOps** means the operational
+practices for monitoring, evaluating, versioning, cost-controlling, and recovering
+large-language-model systems.
+
+**Read:** [Production AI Engineering Bridge](https://github.com/julie-elkins/agent-assurance-harness/blob/main/docs/PRODUCTION_AI_ENGINEERING_BRIDGE.md)
+
+**Run:** Open the
+[Production AI Engineering Bridge Lab](https://github.com/julie-elkins/agent-assurance-harness/blob/main/examples/production-ai-engineering-bridge-lab/README.md)
+and run:
+
+```bash
+uv run python examples/production-ai-engineering-bridge-lab/run_lab.py
+```
+
+**Expected result:** The synthetic workflow records its data contract and access check,
+detects an empty semantic result despite transport success, blocks an external write
+without execution authority, preserves bounded evidence, contains the incident, and
+stages recovery for human review.
+
+**Learner checkpoint:** Explain what evidence would reconstruct the run, why the
+external action is blocked, which boundary is outside the model, and what regression
+test should run before recovery.
+
+**Limitation:** This is an offline synthetic lab. It does not establish live model
+quality, production observability, security approval, rollback capability, or business
+impact.
 
 ## Part 2 — Check the workflow
 
@@ -273,10 +307,12 @@ You have completed the path when you can:
 
 1. explain the foundational components of an AI system;
 2. describe the agent workflow you would build;
-3. identify evidence that would make the workflow abstain or escalate;
-4. explain why the evaluation method itself may be too weak to support the decision;
-5. identify untrusted inputs, excessive permissions, and approval boundaries; and
-6. state what each repository does not prove.
+3. explain how data, access, telemetry, evaluation, and recovery connect in a
+   production-shaped workflow;
+4. identify evidence that would make the workflow abstain or escalate;
+5. explain why the evaluation method itself may be too weak to support the decision;
+6. identify untrusted inputs, excessive permissions, and approval boundaries; and
+7. state what each repository does not prove.
 
 ## More learning
 
