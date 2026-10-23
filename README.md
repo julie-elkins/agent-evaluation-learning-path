@@ -205,6 +205,16 @@ test should run before recovery. Identify which guardrails apply at input, agent
 handoff, tool, and external-action boundaries, and explain what happens if the
 guardrail or approval check is unavailable.
 
+**Advanced continuation:** Read the
+[Advanced Production Operations lesson](https://github.com/julie-elkins/agent-assurance-harness/blob/main/docs/ADVANCED_PRODUCTION_OPERATIONS.md)
+to study the organizational decisions around an incident. Assign an incident
+commander, technical lead, security/privacy lead, product owner, communications lead,
+scribe, and change approver. Then return to the
+[AI Incident Response Tabletop Lab](https://github.com/julie-elkins/agent-assurance-harness/blob/main/examples/ai-incident-response-lab/README.md)
+and decide who owns containment, what the first bounded update says, whether recovery
+is a standard or emergency change, what canary scope is safe, and what evidence permits
+broader restoration.
+
 **Limitation:** This is an offline synthetic lab. It does not establish live model
 quality, production observability, security approval, rollback capability, or business
 impact.
