@@ -153,7 +153,7 @@ You have completed the path when you can:
 ## More learning
 
 For additional technical walkthroughs and enablement material, visit
-[AWS Julie on YouTube](https://www.youtube.com/@JulieElkins). The channel is
+[Julie Elkins on YouTube](https://www.youtube.com/@JulieElkins). The channel is
 supplementary learning; the three repositories remain the evidence for this path's
 exercises and claims.
 
