@@ -276,9 +276,33 @@ optional model-judge stage and can incur provider cost.
 access or credentials. The reports show why sample size, stratification, confidence
 bounds, rater agreement, and evaluator repeatability can change a deployment decision.
 
+### Evidence-to-claim discipline
+
+**Epistemology** means asking what we are justified in concluding from the evidence we
+actually observed. Use three labels when reviewing an evaluation:
+
+- **Observed:** what the fixture, trace, test, or report directly records;
+- **Inferred:** what those observations support within the tested task, population, and
+  revision scope; and
+- **Unestablished:** what was not tested or cannot be concluded from the available
+  evidence.
+
+A passing score can support a scoped claim about the tested evaluation. It cannot, by
+itself, prove broad capability, stable behavior under unseen inputs, or the system's
+underlying state. The cost of skipping this distinction is a report that is numerically
+correct and still makes a claim the evidence cannot carry.
+
+**Learner exercise:** Choose one result from the study and write:
+
+1. the observation;
+2. the narrowest inference it supports;
+3. the assumptions that connect the observation to that inference; and
+4. one claim that remains unestablished.
+
 **Learner checkpoint:** Explain why a point estimate can look safe while its confidence
-bound is not, why pooled results can hide a high-consequence failure family, and why an
-evaluation needs evidence about its own repeatability.
+bound is not, why pooled results can hide a high-consequence failure family, why an
+evaluation needs evidence about its own repeatability, and how the evidence-to-claim
+boundary limits what you may conclude about the system.
 
 **Limitation:** This study uses a fixed historical fixture and one human reference pass.
 It demonstrates evaluation reasoning; it does not establish general model quality or
