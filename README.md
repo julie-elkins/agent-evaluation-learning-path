@@ -65,6 +65,18 @@ the only step that can spend money, and it is not required.
 
 Follow the parts in order.
 
+### Why the path is structured this way
+
+This portal records the route; the linked repositories record the implementations. The
+full design reasoning is in
+[DESIGN_DECISIONS.md](DESIGN_DECISIONS.md), using the shared
+[decision-reasoning template](https://github.com/julie-elkins/agent-systems-design-guide/blob/main/DESIGN_DECISION_TEMPLATE.md).
+
+The important choice is to teach the chain from official guidance and system context to
+design decision, runnable exercise, verification, production implication, and
+limitation. That gives newer engineers something they can inspect and challenge instead
+of asking them to copy a command whose scope they cannot yet judge.
+
 ### New learner: the shortest route
 
 If you are new to AI systems, use this sequence:
@@ -80,6 +92,31 @@ If you are new to AI systems, use this sequence:
 You do not need to understand the repository folders before starting. The portal gives
 you the route; each repository remains the authoritative source for the material it
 owns.
+
+### Recent research reading
+
+Use these papers after the required path. They are not additional dependencies
+and they do not turn the synthetic labs into long-horizon or production
+benchmarks.
+
+- [Measuring AI Ability to Complete Long Software Tasks](https://arxiv.org/abs/2503.14499)
+  — human-anchored task duration and 50%/80% reliability horizons.
+- [A Live Benchmark and Automated Evaluation for Generative Research Synthesis](https://arxiv.org/abs/2508.20033)
+  — synthesis quality, retrieval quality, and citation verifiability.
+- [Do Agent Benchmarks Measure Capability?](https://arxiv.org/abs/2607.22368)
+  — protocol validity and shortcut-resistant scoring.
+- [Towards a Science of AI Agent Reliability](https://arxiv.org/abs/2602.16666)
+  — reliability as separate properties including consistency, robustness,
+  predictability, and safety.
+- [GDPval](https://openai.com/index/gdpval/)
+  — a contrast between professional-task quality and bounded synthetic
+  assurance evidence.
+
+The current research project in
+[LLM Eval Validity](https://github.com/julie-elkins/llm-eval-validity) remains
+narrow: it compares provider output conditions against a local evidence
+contract. It does not claim long-horizon capability, professional-task quality,
+research-synthesis quality, or real-user outcomes.
 
 ## Part 0 — Build the foundations
 
@@ -307,6 +344,12 @@ boundary limits what you may conclude about the system.
 **Limitation:** This study uses a fixed historical fixture and one human reference pass.
 It demonstrates evaluation reasoning; it does not establish general model quality or
 production safety.
+
+**Advanced measurement note:** Before expanding the case count, ask whether the
+protocol is valid for the intended claim. A long-horizon study would need a
+human-professional time baseline, multiple reliability thresholds, trajectory
+failure locations, recovery evidence, and controls for tools, context, and the
+environment. More cases do not repair a scoring rule that allows a false pass.
 
 ## Part 4 — Secure the workflow
 
