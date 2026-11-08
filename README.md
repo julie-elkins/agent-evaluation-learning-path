@@ -118,6 +118,19 @@ narrow: it compares provider output conditions against a local evidence
 contract. It does not claim long-horizon capability, professional-task quality,
 research-synthesis quality, or real-user outcomes.
 
+For the next research direction, watch
+[Stanford CS329A Part 9: Future Research Areas](https://www.youtube.com/watch?v=AyO6wyu4DEg&list=PLangBM27OtEA&index=9).
+Use it as optional context for:
+
+- diversity in generated reasoning and candidate trajectories;
+- verifier and meta-verifier validity;
+- self-generated task curricula and reward-hacking controls;
+- continual-learning boundaries between memory, context, and weight updates; and
+- quality, latency, cost, energy, privacy, and local/cloud routing tradeoffs.
+
+These are future research surfaces. They are not required prerequisites and
+they do not expand the claims of the current paper or synthetic labs.
+
 ## Part 0 — Build the foundations
 
 **Objective:** Build the technical layers underneath AI systems before choosing
