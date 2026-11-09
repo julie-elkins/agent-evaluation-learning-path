@@ -77,6 +77,12 @@ design decision, runnable exercise, verification, production implication, and
 limitation. That gives newer engineers something they can inspect and challenge instead
 of asking them to copy a command whose scope they cannot yet judge.
 
+Use the [evaluation-layer guide](https://github.com/julie-elkins/agent-systems-design-guide/blob/main/EVALUATION_LAYERS.md)
+as the map for the path: research measurement, application or agent evaluation,
+production assurance, and monitoring answer different questions and require
+different evidence. The linked repositories remain authoritative for their own
+implementation, study, or learner material.
+
 ### New learner: the shortest route
 
 If you are new to AI systems, use this sequence:
