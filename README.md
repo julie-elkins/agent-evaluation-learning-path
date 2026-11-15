@@ -83,6 +83,12 @@ production assurance, and monitoring answer different questions and require
 different evidence. The linked repositories remain authoritative for their own
 implementation, study, or learner material.
 
+Use the [AI Teaching Strategies](https://github.com/julie-elkins/ai-teaching-strategies)
+repository as the teaching layer for the path. It helps a facilitator choose
+the audience entry point, demonstrate a positive and degraded workflow, assess
+learner evidence, calibrate delivery, and interpret adoption signals without
+turning views or completion clicks into learning claims.
+
 ### New learner: the shortest route
 
 If you are new to AI systems, use this sequence:
@@ -98,6 +104,14 @@ If you are new to AI systems, use this sequence:
 You do not need to understand the repository folders before starting. The portal gives
 you the route; each repository remains the authoritative source for the material it
 owns.
+
+### Facilitator diagnostic
+
+Before assigning the full path, use the teaching-strategy cards to ask the
+learner to name the decision, failure cost, and evidence they expect to inspect.
+Use that response to choose the minimum route and one optional depth branch.
+This diagnostic improves discoverability; it does not score the learner or
+predict completion.
 
 ### Recent research reading
 
