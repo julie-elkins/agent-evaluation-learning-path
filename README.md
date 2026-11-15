@@ -63,6 +63,14 @@ You need:
 The required exercises are offline or synthetic. The optional judge stage in Part 3 is
 the only step that can spend money, and it is not required.
 
+## Feedback
+
+If you use this learning path, use the public
+[learner feedback issue form](https://github.com/julie-elkins/agent-evaluation-learning-path/issues/new?template=learner-feedback.yml).
+Feedback is used to improve route clarity, accessibility, and links to the
+canonical course repositories. Do not include personal, confidential, private
+learner, exam, provider, credential, or secret information in a public issue.
+
 Follow the parts in order.
 
 ### Why the path is structured this way
