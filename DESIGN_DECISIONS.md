@@ -158,3 +158,26 @@ The format follows the
   uncertainty, evaluator validity, retrieval failure, or recovery changes the decision.
 - **What this does not prove:** Completing the route does not certify production
   readiness or learner competence.
+
+## 9. Make the capstone an integrated decision contract
+
+- **Problem:** A learner can complete statistics, judge, retrieval, and recovery
+  exercises independently without demonstrating how those evidence types interact
+  in one release decision.
+- **Decision:** Add one synthetic capstone scenario with a report contract,
+  evidence map, negative-control requirement, and reviewer rubric.
+- **Instead of:** Building another evaluator or copying the implementation and
+  fixtures from the canonical repositories into this portal.
+- **Why:** The transferable skill is deciding what the evidence supports and
+  stating what it does not prove. Keeping the implementations in their owning
+  repositories avoids source drift while giving the learner one coherent case.
+- **Implementation:** `CAPSTONE.md` defines the Atlas scenario, required report
+  sections, evidence boundaries, and feedback prompts. The learning path links to it
+  as Stage 6.
+- **Verification:** A reviewer can check that the report separates task outcome,
+  execution reliability, evidence completeness, claim support, uncertainty, judge
+  validity, retrieval failure, and recovery evidence.
+- **Costs if wrong:** The capstone could become a score-collection exercise or
+  imply that synthetic evidence is production approval.
+- **What this does not prove:** Completing the capstone does not certify a learner,
+  validate a live provider, or authorize a production release.

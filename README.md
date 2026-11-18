@@ -77,6 +77,8 @@ For a focused evaluation-engineering route, use the
 [AI Evaluation Engineer Learning Path](EVAL_ENGINEER_LEARNING_PATH.md). It connects
 the statistics lab, human-grounded judge calibration, RAG failure decomposition,
 ESAC-Bench recovery evidence, and a final bounded decision report.
+The [Evaluation Engineer Capstone](CAPSTONE.md) provides the synthetic scenario,
+evidence map, report contract, and reviewer rubric for that final decision.
 
 ### Why the path is structured this way
 

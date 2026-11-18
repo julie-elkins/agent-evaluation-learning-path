@@ -64,7 +64,10 @@ artifact supports the completion claim afterward?**
 
 ## Stage 6 — Produce the capstone
 
-Create one bounded evaluation report containing:
+Complete the [Evaluation Engineer Capstone](CAPSTONE.md), a synthetic scenario
+that combines the canonical statistics, judge-calibration, RAG, recovery, and
+assurance work into one release decision. Create one bounded evaluation report
+containing:
 
 1. decision and failure cost;
 2. task and evidence contracts;
