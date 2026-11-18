@@ -12,6 +12,13 @@ Read the [sample Atlas report](examples/atlas-capstone-sample.md) after drafting
 your own report. It is deliberately synthetic and demonstrates a hold decision;
 it is a model of reasoning, not an answer key for a live evaluation.
 
+For a second example, read the
+[public-evidence capstone](examples/public-evidence-capstone.md). It uses
+published results from the Harbor study and LLM Eval Validity work, while
+keeping ESAC-Bench and the RAG lab clearly labeled as synthetic controls. It
+shows how to connect real study evidence without turning separate protocols
+into one score.
+
 ## The scenario
 
 You are reviewing **Atlas**, a synthetic agent that:
