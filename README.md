@@ -392,6 +392,13 @@ human-professional time baseline, multiple reliability thresholds, trajectory
 failure locations, recovery evidence, and controls for tools, context, and the
 environment. More cases do not repair a scoring rule that allows a false pass.
 
+For a runnable, provider-neutral example of measuring recovery separately from
+task outcome, use the
+[ESAC-Bench Recovery Track](https://github.com/julie-elkins/esac-bench/blob/main/docs/benchmark-spec.md#recovery-track).
+It uses seven synthetic cases and reports restoration, side-effect integrity,
+recovery evidence, and bounded recovery separately; it does not establish
+production resilience.
+
 ## Part 4 — Secure the workflow
 
 **Repository:** [Agent Assurance Harness](https://github.com/julie-elkins/agent-assurance-harness)
