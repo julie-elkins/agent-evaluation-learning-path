@@ -8,6 +8,10 @@ This is a teaching exercise, not a live-provider benchmark. It uses synthetic
 evidence and links to the canonical repositories instead of copying their
 implementations.
 
+Read the [sample Atlas report](examples/atlas-capstone-sample.md) after drafting
+your own report. It is deliberately synthetic and demonstrates a hold decision;
+it is a model of reasoning, not an answer key for a live evaluation.
+
 ## The scenario
 
 You are reviewing **Atlas**, a synthetic agent that:
