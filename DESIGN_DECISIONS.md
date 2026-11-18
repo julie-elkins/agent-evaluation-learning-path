@@ -181,3 +181,24 @@ The format follows the
   imply that synthetic evidence is production approval.
 - **What this does not prove:** Completing the capstone does not certify a learner,
   validate a live provider, or authorize a production release.
+
+## 10. Include a completed synthetic report
+
+- **Problem:** A report contract can still feel abstract to a learner who has
+  never seen uncertainty, evaluator validity, retrieval failure, and recovery
+  evidence combined in one decision.
+- **Decision:** Include one completed synthetic Atlas report that demonstrates a
+  bounded hold decision.
+- **Instead of:** Publishing real provider results, copying private study data, or
+  presenting a worked example as a universal answer key.
+- **Why:** A concrete report makes the reasoning visible while explicit synthetic
+  labeling prevents the example from being mistaken for benchmark evidence.
+- **Implementation:** `examples/atlas-capstone-sample.md` covers the same sections
+  required by `CAPSTONE.md`, including negative controls, relative cost units,
+  judge suitability, recovery evidence, limitations, and the final recommendation.
+- **Verification:** The sample states its synthetic boundary at the top and in
+  its final claim; every conclusion is tied to a declared evidence dimension.
+- **Costs if wrong:** Learners may copy the sample's numbers or recommendation
+  instead of learning to inspect their own evidence.
+- **What this does not prove:** The sample does not validate Atlas, a model,
+  a provider, a production workflow, or a learner's competence.
