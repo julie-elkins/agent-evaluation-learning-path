@@ -140,3 +140,21 @@ The format follows the
 - **What this does not prove:** Reading the adjacent research does not establish that
   the current labs measure verifier validity, curriculum quality, or production
   efficiency across all environments.
+
+## 8. Build one learner route from the missing projects
+
+- **Problem:** Statistics, judge calibration, retrieval analysis, and recovery evidence
+  are useful as separate repositories but difficult for a new learner to sequence.
+- **Decision:** Add one public evaluation-engineer learning path that links the canonical
+  implementations and ends with a bounded decision report.
+- **Instead of:** Creating a fourth repository that copies the existing labs.
+- **Why:** The learner needs a route and checkpoints, while each implementation repository
+  needs to remain the authoritative source for its own code, fixtures, and claims.
+- **Implementation:** `EVAL_ENGINEER_LEARNING_PATH.md` links `llm-eval-validity`,
+  `claude-evaluation-lab`, and `esac-bench` by dependency order.
+- **Verification:** Each stage has a runnable or inspectable artifact, an interview
+  question, a limitation, and a capstone handoff.
+- **Costs if wrong:** A learner may complete commands without understanding how
+  uncertainty, evaluator validity, retrieval failure, or recovery changes the decision.
+- **What this does not prove:** Completing the route does not certify production
+  readiness or learner competence.
