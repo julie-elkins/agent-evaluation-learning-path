@@ -202,7 +202,6 @@ The format follows the
   instead of learning to inspect their own evidence.
 - **What this does not prove:** The sample does not validate Atlas, a model,
   a provider, a production workflow, or a learner's competence.
-
 ## 11. Add a public-evidence capstone without creating a composite score
 
 - **Problem:** The synthetic Atlas example teaches report structure, but learners

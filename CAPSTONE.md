@@ -18,7 +18,6 @@ published results from the Harbor study and LLM Eval Validity work, while
 keeping ESAC-Bench and the RAG lab clearly labeled as synthetic controls. It
 shows how to connect real study evidence without turning separate protocols
 into one score.
-
 ## The scenario
 
 You are reviewing **Atlas**, a synthetic agent that:
