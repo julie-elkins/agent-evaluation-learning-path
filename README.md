@@ -73,6 +73,11 @@ learner, exam, provider, credential, or secret information in a public issue.
 
 Follow the parts in order.
 
+For a focused evaluation-engineering route, use the
+[AI Evaluation Engineer Learning Path](EVAL_ENGINEER_LEARNING_PATH.md). It connects
+the statistics lab, human-grounded judge calibration, RAG failure decomposition,
+ESAC-Bench recovery evidence, and a final bounded decision report.
+
 ### Why the path is structured this way
 
 This portal records the route; the linked repositories record the implementations. The
