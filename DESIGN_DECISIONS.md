@@ -202,3 +202,31 @@ The format follows the
   instead of learning to inspect their own evidence.
 - **What this does not prove:** The sample does not validate Atlas, a model,
   a provider, a production workflow, or a learner's competence.
+## 11. Add a public-evidence capstone without creating a composite score
+
+- **Problem:** The synthetic Atlas example teaches report structure, but learners
+  also need to see how to use real published evidence without overclaiming or
+  merging incompatible denominators.
+- **Decision:** Add one claim-bounded capstone that cites the public Harbor study
+  and LLM Eval Validity results, while treating ESAC-Bench and the RAG lab as
+  synthetic controls rather than live scores.
+- **Instead of:** Presenting a portfolio result as a universal model ranking,
+  copying raw provider artifacts, or collapsing task outcome, execution
+  reliability, evidence completeness, judge validity, and recovery safety into
+  one number.
+- **Why:** A senior evaluation engineer must be able to connect evidence across
+  repositories while preserving each study's unit of analysis, denominator,
+  protocol, and limitation.
+- **Implementation:** `examples/public-evidence-capstone.md` reports the
+  matched Harbor cohorts, sample-size and judge-calibration limits, RAG
+  negative controls, ESAC-Bench recovery controls, and a hold recommendation.
+- **Verification:** Every real result links to its canonical public source; every
+  synthetic result is labeled; unsupported dimensions are marked not established;
+  no raw trajectory, credential, prompt, provider response, or private content
+  is added.
+- **Costs if wrong:** A learner may mistake a well-connected portfolio for a
+  single benchmark, repeat an unsupported leaderboard claim, or treat synthetic
+  controls as production evidence.
+- **What this does not prove:** The report does not establish production
+  readiness, provider superiority, long-horizon reliability, or learner
+  competence.
